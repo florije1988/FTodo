@@ -6,7 +6,7 @@ from flask.ext.restful import reqparse
 
 from services import TodoService
 from ..basic_handler import BaseHandler
-from app.custom_exception import InvalidAPIUsage
+from ..custom_exception import InvalidAPIUsage
 
 
 class HelloHandler(BaseHandler):

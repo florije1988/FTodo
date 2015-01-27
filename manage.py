@@ -8,7 +8,6 @@ from flask.ext.migrate import Migrate, MigrateCommand
 
 from todo import create_app
 from todo.models import db
-from todo.models import TodoModel
 
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'development')
@@ -21,7 +20,8 @@ migrate = Migrate(app, db)
 
 
 def make_shell_context():
-    return dict(app=app, db=db, TaskModel=TodoModel)
+    # return dict(app=app, db=db, TaskModel=TodoModel)
+    return dict(app=app)
 
 
 manager.add_command("shell", Shell(make_context=make_shell_context))

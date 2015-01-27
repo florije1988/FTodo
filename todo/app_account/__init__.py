@@ -9,4 +9,4 @@ api_account = Api(app_account, catch_all_404s=True)
 
 from . import views
 
-api_account.add_resource(views.DemoHandler, '/demo')
+# api_account.add_resource(views.DemoHandler, '/demo')
